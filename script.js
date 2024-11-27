@@ -11,7 +11,7 @@ function addTask() {
         listContainer.appendChild(li);
 
         const span = document.createElement("span");
-        span.innerHTML = "\u00d7"; // Unicode for the "×" symbol
+        span.innerHTML = "\u00d7";
         li.appendChild(span);
     }
     inputBox.value = "";
@@ -25,7 +25,7 @@ listContainer.addEventListener(
             e.target.classList.toggle("checked");
             saveData();
         } else if (e.target.tagName === "SPAN") {
-            undoStack.push(e.target.parentElement.outerHTML); // Save removed task to undo stack
+            undoStack.push(e.target.parentElement.outerHTML);
             e.target.parentElement.remove();
             saveData();
             saveUndoStack();
