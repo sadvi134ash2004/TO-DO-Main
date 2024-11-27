@@ -21,6 +21,7 @@
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .todo-app h2 {
@@ -29,6 +30,7 @@
     align-items: center;
     margin-bottom: 20px;
     margin-left: 10px;
+    font-size: 24px;
 }
 
 .todo-app h2 img {
@@ -44,6 +46,7 @@
     border-radius: 30px;
     padding: 10px;
     background: #edeef0;
+    flex-wrap: wrap;
 }
 
 input {
@@ -52,9 +55,10 @@ input {
     border: none;
     outline: none;
     background: transparent;
+    font-size: 16px;
 }
 
-button {
+.main-btuu {
     border: none;
     outline: none;
     padding: 10px 20px;
@@ -117,4 +121,82 @@ ul li span {
 
 ul li span:hover {
     background: #edeef0;
+}
+
+.undo-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: #ff5945;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.undo-button:hover {
+    background: #45a049;
+}
+
+.main-btuu:hover {
+    background: #45a049;
+}
+
+@media (max-width: 768px) {
+    .todo-app {
+        padding: 30px 20px;
+        margin: 50px auto 20px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .row input {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .main-btuu {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    ul li {
+        font-size: 15px;
+    }
+
+    ul li span {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        line-height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .todo-app {
+        padding: 20px 15px;
+    }
+
+    .todo-app h2 {
+        font-size: 20px;
+    }
+
+    .row input {
+        font-size: 13px;
+    }
+
+    ul li {
+        font-size: 14px;
+    }
+
+    .main-btuu,
+    .undo-button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
 }
